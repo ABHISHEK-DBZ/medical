@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareCompanion | Smart Medicine Dispenser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="interactive-bg"></div>
+
+    <!-- Modal Overlay -->
+    <div id="preorderModal" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content clay-box">
+            <h2 id="modalTitle">Pre-Order CareCompanion</h2>
+            <p>Join the waitlist today!</p>
+            <form id="preorderForm">
+                <input type="text" name="name" placeholder="Name" class="clay-inset" aria-label="Name" required style="width: 100%; padding: 10px; margin: 10px 0; border: none; border-radius: 12px; outline: none; background: var(--clay-inset-bg); color: var(--text-main);">
+                <input type="email" name="email" placeholder="Email" class="clay-inset" aria-label="Email" required style="width: 100%; padding: 10px; margin: 10px 0; border: none; border-radius: 12px; outline: none; background: var(--clay-inset-bg); color: var(--text-main);">
+                <button type="submit" class="btn clay-btn primary" id="submitBtn" style="width: 100%; margin-top: 15px;">Submit</button>
+                <div id="formFeedback" aria-live="polite" style="margin-top: 10px; font-size: 0.9rem;"></div>
+            </form>
+            <button id="closeModal" class="btn clay-btn-inset" style="margin-top: 10px; width: 100%;" aria-label="Close Pre-order Modal">Close</button>
+        </div>
+    </div>
+
+    <!-- Parallax Decor Shapes -->
+    <div class="parallax-shapes">
+        <div class="parallax-el shape shape-1 clay-box" data-speed="0.3"></div>
+        <div class="parallax-el shape shape-2 clay-box" data-speed="-0.2"></div>
+        <div class="parallax-el shape shape-3 clay-box" data-speed="0.5"></div>
+        <div class="parallax-el shape shape-4 clay-box" data-speed="-0.4"></div>
+    </div>
+    
+    <nav class="navbar animate-on-scroll" aria-label="Main Navigation">
+        <div class="logo">CareCompanion</div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#details">Specs</a></li>
+            <li><button id="themeToggle" class="btn clay-btn-inset" style="padding: 10px 16px; margin-right: 10px; font-size: 1.1rem;" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">🌙</button></li>
+            <li><a href="#contact" class="btn clay-btn" aria-label="Open Pre-Order Form">Pre-Order</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content animate-on-scroll">
+            <h1>Peace of Mind,<br>One Pill at a Time.</h1>
+            <p>The smartest, most intuitive medicine dispenser designed specifically for seniors. Never miss a dose again with gentle reminders and easy dispensing, wrapped in an approachable design.</p>
+            <div class="hero-actions">
+                <button class="btn clay-btn primary">Discover More</button>
+                <button class="btn clay-btn-inset">Watch Video</button>
+            </div>
+        </div>
+        <div class="hero-image animate-on-scroll delay-1">
+            <div class="parallax-el" data-speed="0.15">
+                <div class="product-placeholder clay-box clay-fluffy">
+                    <div class="dispenser-mockup" aria-label="Interactive dispenser mockup">
+                        <div class="screen clay-inset" aria-live="polite">10:00 AM<br><span>Time for Vitamin D</span></div>
+                        <button class="dispense-btn clay-btn" aria-label="Simulate dispensing medication">Push</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features" aria-labelledby="features-heading">
+        <h2 id="features-heading" class="animate-on-scroll">Designed for Simplicity</h2>
+        <div class="features-grid">
+            <div class="feature-card clay-box animate-on-scroll delay-1">
+                <div class="icon clay-btn" aria-hidden="true">🔔</div>
+                <h3>Gentle Audio-Visual Alerts</h3>
+                <p>Soft glowing lights and friendly chimes notify when it's time to take medication, avoiding startling alarms.</p>
+            </div>
+            <div class="feature-card clay-box animate-on-scroll delay-2">
+                <div class="icon clay-btn" aria-hidden="true">📱</div>
+                <h3>Caregiver App Sync</h3>
+                <p>Family members get peace of mind with real-time notifications when doses are taken or missed.</p>
+            </div>
+            <div class="feature-card clay-box animate-on-scroll delay-3">
+                <div class="icon clay-btn" aria-hidden="true">🔋</div>
+                <h3>4-Week Battery Life</h3>
+                <p>No messy cords needed. Long-lasting battery ensures continuous operation even during power outages.</p>
+            </div>
+            <div class="feature-card clay-box animate-on-scroll delay-1">
+                <div class="icon clay-btn" aria-hidden="true">🛡️</div>
+                <h3>Tamper-Resistant</h3>
+                <p>Secure locking mechanism ensures medications are only accessible at the correct times, avoiding accidental double-doses.</p>
+            </div>
+            <div class="feature-card clay-box animate-on-scroll delay-2">
+                <div class="icon clay-btn" aria-hidden="true">🗣️</div>
+                <h3>Voice Assistant Integration</h3>
+                <p>Connects seamlessly with Alexa or Google Home for convenient voice reminders and status checks.</p>
+            </div>
+            <div class="feature-card clay-box animate-on-scroll delay-3">
+                <div class="icon clay-btn" aria-hidden="true">💊</div>
+                <h3>28-Slot Carousel</h3>
+                <p>Spacious, easily fillable compartments store up to a month's worth of daily medications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="info-section animate-on-scroll" aria-labelledby="why-heading">
+        <div class="info-card clay-box clay-fluffy">
+            <h2 id="why-heading">Why a Smart Dispenser?</h2>
+            <br>
+            <p><strong>Independence for Seniors:</strong> Allows elderly loved ones to maintain their independence at home while managing complex medication schedules effortlessly.</p>
+            <p><strong>Medication Adherence:</strong> Over 50% of prescribed medications are not taken correctly. Our intuitive visual and audio cues drastically improve adherence.</p>
+            <p><strong>Peace of Mind for Caregivers:</strong> With our caregiver sync app, you are always in the loop. Know exactly when medication has been dispensed.</p>
+        </div>
+    </section>
+
+    <section id="specs" class="specs-section animate-on-scroll" aria-labelledby="specs-heading">
+        <h2 id="specs-heading">Technical Specifications</h2>
+        <div class="specs-grid">
+            <div class="spec-item clay-box">
+                <h4>Capacity</h4>
+                <p>28 individual compartments (holds up to 6 standard pills each).</p>
+            </div>
+            <div class="spec-item clay-box">
+                <h4>Connectivity</h4>
+                <p>Wi-Fi (2.4GHz), Bluetooth 5.0, Optional Cellular Backup.</p>
+            </div>
+            <div class="spec-item clay-box">
+                <h4>Power & Battery</h4>
+                <p>Rechargeable Lithium-Ion battery. Lasts up to 28 days per charge. USB-C charging.</p>
+            </div>
+            <div class="spec-item clay-box">
+                <h4>Dimensions & Weight</h4>
+                <p>9in (W) x 9in (L) x 2.5in (H). Weighs 1.5 lbs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: MEDICAL INTERACTION CHECKER -->
+    <section id="interaction-checker" class="checker-section animate-on-scroll" aria-labelledby="checker-heading">
+        <h2 id="checker-heading">Why Precision Dispensing Matters</h2>
+        <p class="section-subtitle">As a medical professional, I always warn patients about drug interactions. Try our mock analyzer to see how CareCompanion protects you by spacing out interacting medications.</p>
+        
+        <div class="checker-card clay-box clay-fluffy">
+            <div class="checker-inputs">
+                <div class="input-group">
+                    <label for="drugA">Medication 1</label>
+                    <select id="drugA" class="clay-inset custom-select" aria-label="Select first medication">
+                        <option value="">-- Select Medication --</option>
+                        <option value="Lisinopril">Lisinopril (Blood Pressure)</option>
+                        <option value="Ibuprofen">Ibuprofen (Pain Relief)</option>
+                        <option value="Warfarin">Warfarin (Blood Thinner)</option>
+                        <option value="Aspirin">Aspirin (Heart Health)</option>
+                        <option value="Calcium">Calcium (Supplement)</option>
+                    </select>
+                </div>
+                <span class="checker-plus">+</span>
+                <div class="input-group">
+                    <label for="drugB">Medication 2</label>
+                    <select id="drugB" class="clay-inset custom-select" aria-label="Select second medication">
+                        <option value="">-- Select Medication --</option>
+                        <option value="Lisinopril">Lisinopril (Blood Pressure)</option>
+                        <option value="Ibuprofen">Ibuprofen (Pain Relief)</option>
+                        <option value="Warfarin">Warfarin (Blood Thinner)</option>
+                        <option value="Aspirin">Aspirin (Heart Health)</option>
+                        <option value="Calcium">Calcium (Supplement)</option>
+                    </select>
+                </div>
+            </div>
+            <button id="analyzeBtn" class="btn clay-btn primary" style="margin-top: 1.5rem; width: 100%;">Analyze Interaction</button>
+            
+            <div id="checkerResult" class="checker-result clay-inset" style="display: none;" aria-live="polite">
+                <!-- JS will inject results here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW INTERACTIVE DASHBOARD FEATURE -->
+    <section id="dashboard-preview" class="dashboard-section animate-on-scroll" aria-labelledby="dashboard-heading">
+        <h2 id="dashboard-heading">Interactive Caregiver Dashboard</h2>
+        <p class="section-subtitle">Experience the companion app. Real-time sync keeps you connected.</p>
+        
+        <div class="app-mockup clay-box clay-fluffy">
+            <div class="app-header">
+                <div>
+                    <h3>Patient Status: <span id="mockPatientName" style="color: var(--accent);">Loading...</span></h3>
+                </div>
+                <div class="status-badges">
+                    <div class="badge clay-inset" aria-label="Battery Level">🔋 <span id="mockBattery">--</span></div>
+                    <div class="badge clay-inset" aria-label="Adherence Rate">📈 <span id="mockAdherence">--</span></div>
+                </div>
+            </div>
+            
+            <div class="schedule-container clay-inset">
+                <h4>Today's Schedule</h4>
+                <div id="mockScheduleList" class="schedule-list">
+                    <!-- JavaScript will inject mock data here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta-section animate-on-scroll" aria-labelledby="cta-heading">
+        <div class="cta-card clay-box">
+            <h2 id="cta-heading">Ready to simplify medication?</h2>
+            <p>Join thousands of families bringing safety and independence back to their loved ones.</p>
+            <button class="btn clay-btn primary large" aria-label="Reserve Yours Today">Reserve Yours Today</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
